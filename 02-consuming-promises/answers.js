@@ -1,24 +1,34 @@
 /**
- * 
+ *
  * EXERCISE 1
- * 
+ *
  * @param {Promise} promise
  * @param {thunk} action
- * 
+ *
  */
-function waitForPromise(promise, action){
+function waitForPromise(promise, action) {
   /* IMPLEMENT ME */
+  promise.then(() => {
+    action();
+  });
 }
 /**
- * 
+ *
  * EXERCISE 2
- * 
- * @param {Promise} promise 
- * @param {consumer} consumer 
- * @param {handler} handler 
+ *
+ * @param {Promise} promise
+ * @param {consumer} consumer
+ * @param {handler} handler
  */
-function consumePromise(promise, consumer, handler){
+function consumePromise(promise, consumer, handler) {
   /* IMPLEMENT ME! */
+  promise
+    .then((res) => {
+      consumer(res);
+    })
+    .catch((error) => {
+      handler(error);
+    });
 }
 
 /**
