@@ -6,7 +6,6 @@
  * @returns {Promise<3>}
  */
 function makePromiseResolveWith3(){
-  /* IMPLEMENT ME! */
   return new Promise((resolve) => {
     return resolve(3);
   });
@@ -19,7 +18,6 @@ function makePromiseResolveWith3(){
  * @returns {Promise<,"Boo!">}
  */
 function makePromiseRejectWithBoo(){
-  /* IMPLEMENT ME! */
   return new Promise((resolve,reject) => {
     return reject('Boo!');
   });
@@ -51,7 +49,6 @@ function makePromiseWithConstructor(itShouldResolve){
  * @return {Promise<any>} - A promise that will resolve with the value after delayInMs milliseconds
  */
 function makeDelayPromise(value, delayInMs){
-  /* Return a promise that resolves with the value after delayInMs */
   return new Promise(resolve => {
     setTimeout(()=> {
       resolve(value);

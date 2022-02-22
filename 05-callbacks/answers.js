@@ -37,7 +37,6 @@ function passwordCheckerCb(email, password, cb) {
 function passwordCheckerPrms(email, password) {
   return new Promise((resolve, reject) => {
     passwordCheckerCb(email, password, (error, user) => {
-      /* IMPLEMENT ME! */
       if (error) reject(error);
       else resolve(user);
     });
